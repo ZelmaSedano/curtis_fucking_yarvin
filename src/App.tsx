@@ -1,33 +1,50 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState, useEffect } from 'react'
+
+// import evil_curtis from './assets/ev'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [scrolling, setScrolling] = useState(false);
+
+  // one big block, don't separate or it'll break
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup the event listener on unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  // end of block
+
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="App">
+        <header className={`header ${scrolling ? 'scrolled' : ''}`}>
+          <div className="header-content">
+            <h1>Who the Hell is Curtis Yarvin?</h1>
+            <p>Scroll down to learn who's calling the shots</p>
+          </div>
+        </header>
+
+        <div className="content">
+          <p>Scroll down to see the header collapse.</p>
+          <p>More content...</p>
+          <div style={{ height: '2000px' }}></div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
+      {/* <h1>Who the Hell is Curtis Yarvin?</h1> */}
+      {/* <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p>
+      </p> */}
     </>
   )
 }

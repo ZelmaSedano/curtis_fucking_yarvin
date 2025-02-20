@@ -1,8 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background: url('./assets/evil_curtis.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;  /* Full-page height */
+  background-color: #333;
+  color: white;
+  transition: all 0.3s ease;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.header.scrolled {
+  height: 80px; /* Collapsed height */
+  background-color: #222; /* Darker background when scrolled */
+}
+
+.header-content {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.header.scrolled .header-content {
+  opacity: 0; /* Hide content when collapsed */
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+/* Content Section */
+.content {
+  padding-top: 120px; /* Push content down to avoid overlap with header */
+  text-align: center;
+}
+
+.content p {
+  font-size: 1.5rem;
 }
 
 .logo {
