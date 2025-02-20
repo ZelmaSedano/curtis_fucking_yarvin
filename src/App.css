@@ -49,19 +49,27 @@ body {
   opacity: 0; /* Hide content when collapsed */
 }
 
-h1 {
+.header-h1 {
   font-size: 3rem;
   margin-bottom: 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-p {
-  font-size: 1.2rem;
+.header-p {
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
 }
 
 /* Content Section */
 .content {
-  padding-top: 120px; /* Push content down to avoid overlap with header */
+  padding-top: 700px; /* Push content down to avoid overlap with header */
   text-align: center;
+}
+
+.content-scrolled {
+  padding-top:500px;
+
 }
 
 .content p {

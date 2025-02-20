@@ -30,21 +30,17 @@ function App() {
       <div className="App">
         <header className={`header ${scrolling ? 'scrolled' : ''}`}>
           <div className="header-content">
-            <h1>Who the Hell is Curtis Yarvin?</h1>
-            <p>Scroll down to learn who's calling the shots</p>
+            <h1 className='header-h1'>Who the Hell is Curtis Yarvin?</h1>
+            <p className='header-p'>and why does J.D. Vance worship him?</p>
           </div>
         </header>
-
-        <div className="content">
-          <p>Scroll down to see the header collapse.</p>
-          <p>More content...</p>
-          <div style={{ height: '2000px' }}></div>
-        </div>
       </div>
-      {/* <h1>Who the Hell is Curtis Yarvin?</h1> */}
-      {/* <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p> */}
+
+      <div className="content">
+          <p>Scroll down to see the header collapse.</p>
+          {/* space so you can scroll down*/}
+          <div style={{ height: '500px' }}></div>
+        </div>
     </>
   )
 }
