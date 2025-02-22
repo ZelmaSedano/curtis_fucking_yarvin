@@ -12,7 +12,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: monospace;
 }
 
 .header {
@@ -35,79 +35,115 @@ body {
   flex-direction: column;
   text-align: center;
 }
+
 .header.scrolled {
-  height: 80px; /* Collapsed height */
   background-color: #222; /* Darker background when scrolled */
+  height: 100px; /* Collapsed height */
 }
 
 .header-content {
   opacity: 1;
   transition: opacity 0.3s ease;
+  font-family: "Press Start 2P", serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-top: -10px;
 }
 
 .header.scrolled .header-content {
   opacity: 0; /* Hide content when collapsed */
 }
 
+/* to get the top property to work, the element must inclue the position element */
 .header-h1 {
   font-size: 3rem;
   margin-bottom: 10px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+  color: white;
+  top: -100px;
+  position: relative;
+  
 }
 
+/* 2px horizontal, 2px vertical, 5px blur radius, rgba=shadow color, 0.5 = 50% opacity */
 .header-p {
-  font-size: 1.5rem;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  font-size: 2rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
   font-weight: bold;
+  font-family: "Coda", serif;
+  font-weight: 400;
+  font-style: normal;
+  position: relative;
+  top: -50px;
 }
+
+/* Navbar styles */
+.navbar {
+  /* absolute prop positions element relative to its nearest ancestor <header> */
+  position: absolute; /* floats navbar to bottom */
+  /* the reason the navbar doesn't float at the bottom if you remove absolute is because without it the navbar follows the normal flow of the document layout */
+
+  bottom: 0; /* Positions the navbar at the bottom of the header */
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent background */
+  padding: 10px 0;
+  text-align: center;
+  z-index: 20;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul li {
+  margin: 0 20px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #f39c12; /* Highlight color on hover */
+}
+
 
 /* Content Section */
 .content {
-  padding-top: 700px; /* Push content down to avoid overlap with header */
+  padding-top: 500px; /* Push content down to avoid overlap with header */
   text-align: center;
 }
 
-.content-scrolled {
-  padding-top:500px;
-
+.dark-enlightenment-info-section {
+  padding-bottom: 30px;
 }
 
-.content p {
+.dark-enlightenment-title {
   font-size: 1.5rem;
+  padding-bottom: 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.dark-enlightenment-link {
+  color: red;
+  text-decoration: underline;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dark-enlightenment-text {
+  padding-top: 20px;
+  font-family: monospace;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.butterfly img {
+  width: 700px;
+  height: 700px;
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
