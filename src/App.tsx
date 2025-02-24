@@ -1,3 +1,5 @@
+// to-do: export header, links, and videos into separate components
+
 import { useState, useEffect } from 'react'
 
 import butterfly from './assets/butterfly.jpg'
@@ -6,23 +8,26 @@ import './App.css'
 function App() {
   const [scrolling, setScrolling] = useState(false);
 
-  // one big block, don't separate or it'll break
   useEffect(() => {
+    // Check if the scroll position on the Y-axis (vertical scroll) is greater than 100 pixels
     const handleScroll = () => {
       if (window.scrollY > 100) {
+        // If scrolled more than 100px, set the state 'scrolling' to true
         setScrolling(true);
       } else {
+        // If scrolled less than or equal to 100px, set the state 'scrolling' to false
         setScrolling(false);
       }
     };
+    // add event listener, when user scrolls handleScroll() executes
     window.addEventListener('scroll', handleScroll);
 
-    // Cleanup the event listener on unmount
+    // return cleanup function that removes the eventlistener when component unmounts
     return () => {
+      // Remove the 'scroll' event listener
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
-  // end of block
+  }, []);// The empty dependency array ensures this effect runs only once when the component mounts
 
   // videos object
   const videos1 = [
@@ -33,7 +38,6 @@ function App() {
     'rRq14ZBYwus',
     'RRzfsbIkSoo',
   ];
-
 
   return (
     <>
