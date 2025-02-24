@@ -86,11 +86,13 @@ body {
 
 /* 2px horizontal, 2px vertical, 5px blur radius, rgba=shadow color, 0.5 = 50% opacity */
 .header-p {
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
-  font-weight: bold;
-  font-family: "Coda", serif;
-  font-weight: 400;
+  /* font-weight: bold; */
+  /* font-family: "Coda", serif;
+  font-weight: 400; */
+  font-family: "Orbitron", serif;
+  letter-spacing: 1px;
   font-style: normal;
   position: relative;
   top: -50px;
@@ -121,13 +123,15 @@ body {
 
 .navbar ul li {
   margin: 0 20px;
+  /* font-family: "Press Start 2P", serif; */
+  font-family: "Orbitron", serif;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
 }
 
 .navbar ul li a {
   color: white;
   text-decoration: none;
-  font-family: "Press Start 2P", serif;
-  font-size: 1.2rem;
   transition: color 0.3s;
 }
 
@@ -157,7 +161,7 @@ body {
 }
 
 .dark-enlightenment-title {
-  font-size: 0.95rem;
+  font-size: 1.3rem;
   padding-bottom: 20px;
   font-family: "Press Start 2P", serif;
 }
@@ -168,14 +172,101 @@ body {
 }
 
 .dark-enlightenment-text {
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   padding-top: 20px;
-  font-family: monospace;
+  font-family: "Electrolize", serif;
+  letter-spacing: 1px;
 }
 
+.butterfly-title {
+  font-size: 1.2rem;
+  padding-bottom: 20px;
+  font-family: "Press Start 2P", serif;
+  padding-top: 30px;
+}
+
+.butterfly-title a {
+  color: red;
+  text-decoration: underline;
+}
+
+.butterfly-text {
+  font-size: 1.2rem;
+  font-family: "Electrolize", serif;
+  letter-spacing: 1px;
+}
 .butterfly img {
-  padding-top: 50px;
-  width: 700px;
-  height: 700px;
+  padding-top: 30px;
+  width: 600px;
+  height: 600px;
 }
 
+.links-section {
+  padding-bottom: 50px;
+}
+
+.links-title {
+  padding-top: 30px;
+  font-size: 1.3rem;
+  padding-bottom: 20px;
+  font-family: "Press Start 2P", serif;
+}
+
+.links-text {
+  font-size: 1.2rem;
+  font-family: "Electrolize", serif;
+  letter-spacing: 1px;
+}
+
+.links {
+  padding-top: 20px;
+  font-family: "Orbitron", serif;
+  letter-spacing: 1px;
+}
+
+.links a {
+  color: red;
+}
+
+.links a:hover {
+  color: white; /* Highlight color on hover */
+  font-size: 1.05rem;
+}
+
+
+/********* Video Section **********************************/
+.videos-title {
+  font-size: 1.3rem;
+  padding-bottom: 20px;
+  font-family: "Press Start 2P", serif;
+}
+
+.video-grid {
+  display: grid;
+  /* instead of using auto-fill, specify 3 videos wide, otherwise it'll auto-fill to 4 or 5 videos */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 20px;
+}
+
+.video-grid iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1024px) {
+  .video-grid{
+    /* 2 videos per row*/
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* small screens / mobile */
+@media (max-width: 768px) {
+  .video-grid {
+    /* 1 video per row */
+    grid-template-columns: 1fr; 
+  }
+}
