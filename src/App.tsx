@@ -106,20 +106,39 @@ function App() {
           <h2 className='videos-title'>Videos</h2>
           <p>Here are some videos explaining Curtis Yarvin's ideas.</p>
 
-        <div className="video-grid">
-          {/* map over the videos1 object */}
-          {videos1.map((videoId, index) => (
-            <iframe
-              key={index}
-              src={`https://www.youtube.com/embed/${videoId}`}
-              title={`YouTube video ${index}`}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          ))}
-        </div>
-      </section>
+          <div className="video-grid">
+            {/* map over the videos1 object */}
+            {videos1.map((videoId, index) => (
+              <iframe
+                key={index}
+                src={`https://www.youtube.com/embed/${videoId}`}
+                title={`YouTube video ${index}`}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            ))}
+          </div>
+        </section>
+
+        <section>
+          <div className="footer-content">
+
+            <h2 className='footer-h2'>How can we stop these Tech Bros from dismantling democracy?</h2>
+            <h1 className='footer-h1'>FIGHT BACK</h1>
+            <h2 className='footer-h2'>join these organizations</h2>
+
+            <nav className="footer-navbar">
+              <ul>
+                <li><a href='https://indivisible.org/' target="_blank">indivisible</a></li>
+                <li><a href='https://workingfamilies.org/' target="_blank">WFP</a></li>
+                <li><a href='https://www.dsausa.org/' target='_blank'>DSA</a></li>
+              </ul>
+            </nav>
+
+          </div>
+        </section>
+
     </div>
     </>
   )
