@@ -9,15 +9,14 @@
 
 * {
   margin: 0;
+  padding: 0;
   /* removed padding: 0 b/c it was throwing off footer alignment */
   box-sizing: border-box;
 }
 
 
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -126,7 +125,7 @@ body {
 }
 
 .navbar ul li {
-  margin: 0 20px;
+  margin: 0 30px;
   /* font-family: "Press Start 2P", serif; */
   font-family: "Orbitron", serif;
   letter-spacing: 1px;
@@ -154,6 +153,11 @@ body {
   z-index: 0;
 }
 
+.links-section {
+  width: 80%;
+  margin: 0 auto;
+}
+
 #info,
 #links,
 #videos {
@@ -163,6 +167,8 @@ body {
 
 .dark-enlightenment-info-section {
   padding-bottom: 30px;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .dark-enlightenment-title {
@@ -207,8 +213,11 @@ body {
   height: auto;
 }
 
+/*********** LINKS section **********/
 .links-section {
   padding-bottom: 50px;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .links-title {
@@ -225,7 +234,7 @@ body {
 }
 
 .links {
-  padding-top: 20px;
+  padding-top: 40px;
   font-family: "Orbitron", serif;
   letter-spacing: 1px;
 }
@@ -239,8 +248,11 @@ body {
   font-size: 1.05rem;
 }
 
-
 /********* Video Section **********************************/
+.videos-section {
+  width: 90%;
+  margin: 0 auto;
+}
 .videos-title {
   font-size: 1.3rem;
   padding-bottom: 20px;
@@ -264,16 +276,23 @@ body {
 
 /********* footer ******************************/
 .footer-content {
-  margin: 30px 0;
-  background-color: #3b3638;
+  background-color: rgb(254, 1, 1, 0.8);
+  width: 100%;
+  margin-top: 20px;
+}
+
+.footer-h2 {
+  padding-top: 30px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
 }
 
 .footer-h1 {
-  margin: 20px 0;
+  margin-top: 40px;
+  font-family: "Press Start 2P", serif;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
 }
 
 .footer-navbar {
-  position: absolute;
   width: 100%;
   padding: 15px 0;
   text-align: center;
@@ -286,12 +305,14 @@ body {
   gap: 1rem;
   /* moves text to center */
   justify-content: center;
+  margin-top: 10px;
 }
 
 .footer-navbar ul li {
-  margin: 0 20px;
+  margin: 0 30px;
   font-family: "Orbitron", serif;
   font-size: 1.7rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
 }
 
 .footer-navbar ul li a {
@@ -301,7 +322,7 @@ body {
 }
 
 .footer-navbar ul li a:hover {
-  color: red; /* Highlight color on hover */
+  color: black; /* Highlight color on hover */
 }
 
 
