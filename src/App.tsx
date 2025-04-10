@@ -88,6 +88,7 @@ function App() {
         {/* Links Section */}
         <section id="links" className='links-section'>
           <h2 className='links-title'>Links</h2>
+          
           <p className='links-text'>Recently there have been many articles about Yarvin cropping up in the Zeitgeist.  Here are a few.</p>
 
           <p className='links'><a href='https://www.nytimes.com/2025/01/18/magazine/curtis-yarvin-interview.html' target='_blank'>New York Times - Curtis Yaring Says Democracy is Done.  Powerful Conservatives are Listening</a></p>
@@ -125,8 +126,7 @@ function App() {
           <div className="footer-content">
 
             <h2 className='footer-h2'>How can we stop these Tech Bros from dismantling democracy?</h2>
-            <h1 className='footer-h1'>FIGHT BACK</h1>
-            <h2 className='footer-h2'>join these organizations</h2>
+            <h1 className='footer-h1'>FIGHT BACK & JOIN</h1>
 
             <nav className="footer-navbar">
               <ul>
